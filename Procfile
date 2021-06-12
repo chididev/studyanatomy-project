@@ -1,0 +1,1 @@
+web: gunicorn anastudy.wsgi:application --log-file -

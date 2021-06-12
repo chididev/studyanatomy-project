@@ -1,0 +1,28 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album pt-3" style="text-align:center; background-color: #F5FFFA;">
+    <div class="container-fluid">
+        <div class="row">
+            {% for tissue in tissues.all %}
+            <div class="col-md-3">
+                <div class="card mb-4 box-shadow">
+                    <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:15px;">{{ tissue.title }}</h5>
+                    <img class="card-img-top" src="{{ tissue.image.url }}" alt="Card image cap" height=100 width=100>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align:justify;">{{ tissue.summary }}</p>
+                        <hr>
+                        <p><a class="btn btn-sm btn-outline-dark" href="{% url 'tissue_detail' tissue.id %}"
+                                style="font-size: 12px;">study</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-3" style="background-color: #F5FFFA; text-align: center;">
+    <a class="btn btn-sm btn-outline-dark" href="{% url 'histo' %}" style="font-size: 12px;">Go Back</a>
+</div>
+{% endblock %}
