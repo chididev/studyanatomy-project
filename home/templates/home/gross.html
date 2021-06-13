@@ -1,11 +1,11 @@
 {% extends 'main_courses.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid pb-2" style="background-color: #663399; text-align: center;">
+<div class="container-fluid pb-2" style="background-color: #F5FFFA; text-align: center;">
     <div class="container">
         <div class="row">
             <div class="col align-self-center">
-                <h2 class="pt-2" style="text-transform: capitalize; color: #F5FFFA; text-align:center;"> select region
+                <h2 class="pt-2" style="text-transform: capitalize; color: #F5FFFA; text-align:center;"> choose region
                 </h2>
                 <div class="album">
                     <div class="container-fluid">
@@ -16,7 +16,7 @@
                                         src="{% static 'u&l.jpg' %}" alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'limb' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                                         src="{% static 't&a.jpg' %}" alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'thoraxabdomen' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                         src="{% static 'p&p.jpg' %}" alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'pelvisperineum' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                         alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'headneck' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                         alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'neuroanatomy' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-    <p><a class="btn btn-outline-light btn-sm" href="{% url 'home' %}" style="text-align: center; text-transform: uppercase;"> back "2" homepage
+    <p><a class="btn btn-outline-dark btn-sm" href="{% url 'home' %}" style="text-align: center; text-transform: uppercase;"> back "2" homepage
     </a>
     </p>
 </div>

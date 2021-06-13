@@ -3,16 +3,16 @@
 {%load crispy_forms_tags %}
 {% block content %}
 <!--Contact form-->
-<div class="container-fluid pt-3 pb-3">
+<div class="container-fluid pt-3 pb-3" style="background-color:#F5FFFA;">
     <div class="container">
-        <h1 style="font-size: 30px;">Contact Us</h1>
+        <h1 style="font-size: 30px; color: #663399;">Contact Us</h1>
         <p style="font-size: 16px; text-align: justify;">
             Message us directly for our services or support by filling out the form below. We would get back to you via
             a private mail to the email address provided. Thank you!!!
         </p>
     </div>
 </div>
-<div class="container-fluid pt-3 pb-3" style="background-color: #663399; color: #FFFFF0;">
+<div class="container-fluid pt-3 pb-3" style="background-color: #F5FFFA; color: #663399;">
     <div class="container pt-3 pb-3">
         <form method="post">
             {% csrf_token %}

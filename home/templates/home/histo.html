@@ -1,7 +1,7 @@
 {% extends 'main_courses.html' %}
 {% load static %}
 {% block content %}
-<div class="container-fluid pb-2" style="background-color: #663399; text-align: center;">
+<div class="container-fluid pb-2" style="background-color: #F5FFFA; text-align: center;">
     <div class="container">
         <div class="row">
             <div class="col align-self-center">
@@ -16,7 +16,7 @@
                                         src="{% static 'basic tissues.jpg' %}" alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'tissue_histology' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                                         src="{% static 'systemic.jpg' %}" alt="Card image cap" height="300" width="500">
                                     <div class="card-body" style="background-color: #F5FFFA;">
                                         <a class="btn btn-outline-dark btn-sm" href="{% url 'systemic_histology' %}"
-                                            style="text-align: center; text-transform: uppercase;">study</a>
+                                            style="text-align: center; text-transform: capitalize;">study</a>
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    <p><a class="btn btn-outline-light btn-sm" href="{% url 'home' %}"
+    <p><a class="btn btn-outline-dark btn-sm" href="{% url 'home' %}"
             style="text-transform: uppercase;"> back "2" homepage
         </a>
     </p>
