@@ -4,11 +4,13 @@ from .models import *
 
 
 # Create your views here.
+@login_required
 def limb(request):
     limbs = Limb.objects.all()
     return render(request, 'limbs/limbs.html', {'limbs': limbs})
 
 
+@login_required
 def limb_detail(request, limb_id):
     limb_detail = get_object_or_404(Limb, pk=limb_id)
     return render(request, 'limbs/limbs_detail.html', {'limb': limb_detail})

@@ -4,11 +4,13 @@ from .models import *
 
 
 # Create your views here.
+@login_required
 def pelvisperineum(request):
     pelvisperineums = Pelvisperineum.objects.all()
     return render(request, 'pelvisperineum/pelvisperineum.html', {'pelvisperineums': pelvisperineums})
 
 
+@login_required
 def pelvisperineum_detail(request, pelvisperineum_id):
     pelvisperineum_detail = get_object_or_404(
         Pelvisperineum, pk=pelvisperineum_id)

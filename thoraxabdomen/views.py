@@ -4,11 +4,13 @@ from .models import *
 
 
 # Create your views here.
+@login_required
 def thoraxabdomen(request):
     thoraxabdomens = Thoraxabdomen.objects.all()
     return render(request, 'thoraxabdomen/thoraxabdomen.html', {'thoraxabdomens': thoraxabdomens})
 
 
+@login_required
 def thoraxabdomen_detail(request, thoraxabdomen_id):
     thoraxabdomen_detail = get_object_or_404(
         Thoraxabdomen, pk=thoraxabdomen_id)
