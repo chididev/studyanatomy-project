@@ -1,0 +1,26 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album pt-3 pb-3" style="text-align:center; background-color: #663399;">
+    <div class="container-fluid">
+        <div class="row">
+            {% for systemic in systemics.all %}
+            <div class="col-md-3">
+                <div class="card mb-4 box-shadow">
+                    <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:15px;">{{ systemic.title }}</h5>
+                    <img class="card-img-top" src="{{ systemic.image.url }}" alt="Card image cap" height=100 width=100>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align:justify;">{{ systemic.summary }}</p>
+                        <hr>
+                        <p><a class="btn btn-sm btn-outline-dark" href="{% url 'systemic_detail' systemic.id %}"
+                                style="font-size: 12px;">study</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a class="btn btn-sm btn-outline-light" href="{% url 'histo' %}" style="font-size: 12px;">Go Back</a>
+</div>
+{% endblock %}

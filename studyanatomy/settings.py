@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'home',
     'contact_us',
     'histology',
+    'systemichistology',
 
     # DJANGO CRISPY FORM
     'crispy_forms',

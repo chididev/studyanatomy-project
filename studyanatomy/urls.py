@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('contact/', include('contact_us.urls')),
     path('histology/', include('histology.urls')),
+    path('systemichistology/', include('systemichistology.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

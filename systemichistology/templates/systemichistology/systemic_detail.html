@@ -5,18 +5,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #F5FFFA;">{{ tissue.title }}</h4>
+                <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #F5FFFA;">{{ systemic.title }}</h4>
                 <div class="card mb-4 box-shadow">
-                    <img class="card-img-top image-fluid pb-3" src="{{ tissue.image.url }}" alt="Card image cap"
+                    <img class="card-img-top image-fluid pb-3" src="{{ systemic.image.url }}" alt="Card image cap"
                         height=300 width=400>
                     <div class="card-body">
-                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ tissue.body }}</p>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ systemic.body }}</p>
                         <hr>
                         <p class="card-text" style="text-align: center; font-size: 15px;">Study questions</p>
                         <hr>
-                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ tissue.question1 }}</p>
-                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ tissue.question2 }}</p>
-                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ tissue.question3 }}</p>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ systemic.question1 }}</p>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ systemic.question2 }}</p>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ systemic.question3 }}</p>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
     </div>
 </div>
 <div class="container-fluid pt-3 pb-3" style="background-color: #663399; text-align: center;">
-    <p><a class="btn btn-sm btn-outline-light" href="{% url 'tissue_histology' %}" style="font-size: 12px;">Go
+    <p><a class="btn btn-sm btn-outline-light" href="{% url 'systemic_histology' %}" style="font-size: 12px;">Go
             Back</a>
         &nbsp;
         <a class="btn btn-sm btn-outline-light" href="#" style="font-size: 12px;">Back "2" top</a>
