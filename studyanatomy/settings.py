@@ -51,6 +51,10 @@ INSTALLED_APPS = [
     'systemichistology',
     'embryology',
     'neuroanatomy',
+    'limbs',
+    'thoraxabdomen',
+    'pelvisperineum',
+    'headneck',
 
     # DJANGO CRISPY FORM
     'crispy_forms',

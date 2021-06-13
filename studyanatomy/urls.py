@@ -26,4 +26,8 @@ urlpatterns = [
     path('systemichistology/', include('systemichistology.urls')),
     path('embryology/', include('embryology.urls')),
     path('neuroanatomy/', include('neuroanatomy.urls')),
+    path('limbs/', include('limbs.urls')),
+    path('thoraxabdomen/', include('thoraxabdomen.urls')),
+    path('pelvisperineum/', include('pelvisperineum.urls')),
+    path('headneck/', include('headneck.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

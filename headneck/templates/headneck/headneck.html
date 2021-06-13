@@ -1,0 +1,28 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album pt-3 pb-3" style="text-align:center; background-color: #663399;">
+    <div class="container-fluid">
+        <div class="row">
+            {% for headneck in headnecks.all %}
+            <div class="col-md-3">
+                <div class="card mb-4 box-shadow">
+                    <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:15px;">{{ headneck.title }}</h5>
+                    <img class="card-img-top" src="{{ headneck.image.url }}" alt="Card image cap" height=100
+                        width=100>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align:justify;">{{ headneck.summary }}</p>
+                        <hr>
+                        <p><a class="btn btn-sm btn-outline-dark"
+                                href="{% url 'headneck_detail' headneck.id %}"
+                                style="font-size: 12px;">study</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a class="btn btn-sm btn-outline-light" href="{% url 'gross' %}" style="font-size: 12px;">Go Back</a>
+</div>
+{% endblock %}
