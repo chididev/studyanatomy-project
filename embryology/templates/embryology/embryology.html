@@ -1,0 +1,26 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album pt-3 pb-3" style="text-align:center; background-color: #663399;">
+    <div class="container-fluid">
+        <div class="row">
+            {% for embryology in embryologys.all %}
+            <div class="col-md-3">
+                <div class="card mb-4 box-shadow">
+                    <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:15px;">{{ embryology.title }}</h5>
+                    <img class="card-img-top" src="{{ embryology.image.url }}" alt="Card image cap" height=100 width=100>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align:justify;">{{ embryology.summary }}</p>
+                        <hr>
+                        <p><a class="btn btn-sm btn-outline-dark" href="{% url 'embryology_detail' embryology.id %}"
+                                style="font-size: 12px;">study</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a class="btn btn-sm btn-outline-light" href="{% url 'home' %}" style="font-size: 12px;">Back "2" Homepage</a>
+</div>
+{% endblock %}
