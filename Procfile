@@ -1,1 +1,1 @@
-web: gunicorn anastudy.wsgi:application --log-file -
+web: gunicorn studyanatomy.wsgi:application --log-file -
