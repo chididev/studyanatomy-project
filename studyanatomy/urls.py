@@ -30,4 +30,6 @@ urlpatterns = [
     path('thoraxabdomen/', include('thoraxabdomen.urls')),
     path('pelvisperineum/', include('pelvisperineum.urls')),
     path('headneck/', include('headneck.urls')),
+    # DJANGO ALLAUTH URLS
+    path('accounts/', include('allauth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
