@@ -1,0 +1,33 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album pt-2" style="background-color: #663399;text-align: justify;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 style="text-transform: capitalize; text-align: center; font-size:18px; color: #F5FFFA;">{{ neuroanatomy.title }}</h4>
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top image-fluid pb-3" src="{{ neuroanatomy.image.url }}" alt="Card image cap"
+                        height=300 width=400>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ neuroanatomy.body }}</p>
+                        <hr>
+                        <p class="card-text" style="text-align: center; font-size: 15px;">Study questions</p>
+                        <hr>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ neuroanatomy.question1 }}</p>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ neuroanatomy.question2 }}</p>
+                        <p class="card-text" style="text-align: justify; font-size: 15px;">{{ neuroanatomy.question3 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-3 pb-3" style="background-color: #663399; text-align: center;">
+    <p><a class="btn btn-sm btn-outline-light" href="{% url 'neuroanatomy' %}" style="font-size: 12px;">Go
+            Back</a>
+        &nbsp;
+        <a class="btn btn-sm btn-outline-light" href="#" style="font-size: 12px;">Back "2" top</a>
+    </p>
+</div>
+{% endblock %}
