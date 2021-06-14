@@ -1,0 +1,27 @@
+{% extends 'main_courses.html' %}
+{% load static %}
+{% block content %}
+<div class="album pt-3 pb-3" style="text-align:center; background-color: #F5FFFA;">
+    <div class="container-fluid">
+        <div class="row">
+            {% for basic in basics.all %}
+            <div class="col-md-3">
+                <div class="card mb-4 box-shadow">
+                    <h5 class="pt-3" style="text-transform: capitalize; text-align: center; font-size:20px;">{{ basic.title }}</h5>
+                    <img class="card-img-top" src="{{ basic.image.url }}" alt="Card image cap" height=100
+                        width=100>
+                    <div class="card-body">
+                        <p class="card-text" style="text-align:justify;">{{ basic.summary }}</p>
+                        <hr>
+                        <p><a class="btn btn-sm btn-outline-dark" href="{% url 'basic_detail' basic.id %}"
+                                style="font-size: 12px;">study</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <a class="btn btn-sm btn-outline-dark" href="{% url 'home' %}" style="font-size: 12px;">Back "2" Homepage</a>
+</div>
+{% endblock %}

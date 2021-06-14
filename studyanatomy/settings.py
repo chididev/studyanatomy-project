@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'thoraxabdomen',
     'pelvisperineum',
     'headneck',
+    'basic',
 
     # DJANGO CRISPY FORM
     'crispy_forms',
